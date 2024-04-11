@@ -10,12 +10,6 @@ class Rectangle
   $this->dim2 = $dim2;
  }
  
- function display()
- {
-  echo "Rectangle dimensions: " . $this->dim1 . " x " . $this->dim2 . "\n";
-   echo "Area: " . $this->area() . "\n"; }
-}
-
 $S = new Rectangle(4,2);
 
 $class_properties = get_class_vars("Rectangle");
