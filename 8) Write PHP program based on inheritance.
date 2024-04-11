@@ -1,24 +1,42 @@
 <?php
-class addition 
-{ 
- function __call($name_of_function, $arguments)
- { 
-if($name_of_function == 'add') 
- { 
- switch (count($arguments))
- { 
- case 1: 
- return $arguments[0]; 
- case 2: 
- return $arguments[0] + $arguments[1]; 
- case 3: 
- return $arguments[0] + $arguments[1] + $arguments[2]; 
- } 
- } 
- } 
-} 
-$s = new addition; 
-echo("Return One value:" . $s->add(10))."<br>"; 
-echo ("Addition of two numbers:" . $s->add(10,20)) . "<br>"; 
-echo ("Addition of three numbers:" . $s->add(10,20,30)) . "<br>";
+
+class Shape {
+    
+    public function area() {
+        return 0;
+    }
+}
+
+class Rectangle extends Shape {
+    private $width;
+    private $height;
+    
+    public function __construct($width, $height) {
+        $this->width = $width;
+        $this->height = $height;
+    }
+    
+    public function area() {
+        return $this->width * $this->height;
+    }
+}
+
+class Circle extends Shape {
+    private $radius;
+    
+    public function __construct($radius) {
+        $this->radius = $radius;
+    }
+    
+    public function area() {
+        return 3.14* $this->radius * $this->radius;
+    }
+}
+
+$rectangle = new Rectangle(5, 10);
+echo "Area of rectangle: " . $rectangle->area() . "\n";
+
+$circle = new Circle(7);
+echo "Area of circle: " . $circle->area() . "\n";
 ?>
+
