@@ -9,7 +9,7 @@ class Rectangle
   $this->dim1 = $dim1;
   $this->dim2 = $dim2;
  }
- 
+}
 $S = new Rectangle(4,2);
 
 $class_properties = get_class_vars("Rectangle");
