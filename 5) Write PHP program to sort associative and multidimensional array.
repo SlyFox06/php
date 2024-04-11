@@ -1,0 +1,37 @@
+<?php
+$associativeArray = array(
+    "John" => 30,
+    "Alice" => 25,
+    "Bob" => 35,
+    "David" => 28
+);
+
+asort($associativeArray);
+
+
+echo "Sorted Associative Array by Values:<br>";
+foreach ($associativeArray as $key => $value) {
+    echo "$key: $value<br>";
+}
+
+$multidimensionalArray = array(
+    array("name" => "John", "age" => 30),
+    array("name" => "Alice", "age" => 25),
+    array("name" => "Bob", "age" => 35),
+    array("name" => "David", "age" => 28)
+);
+
+
+function sortByAge($a, $b) {
+    return $a['age'] - $b['age'];
+}
+
+
+usort($multidimensionalArray, 'sortByAge');
+
+
+echo "Sorted Multidimensional Array by Age:<br>";
+foreach ($multidimensionalArray as $person) {
+    echo "Name: {$person['name']}, Age: {$person['age']}<br>";
+}
+?>
