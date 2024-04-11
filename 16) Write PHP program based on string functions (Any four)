@@ -1,0 +1,7 @@
+<?php
+echo strlen("Welcome to PHP");
+echo strrev("Information Technology");
+echo ucwords("welcome to php world");
+echo strtoupper("information technology ");
+echo strtolower("INFORMATION TECHNOLOGY");
+?>
